@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#4f46e5" />
+  <meta name="description" content="PulseAI - Your AI Health Assistant" />
+  <title>PulseAI</title>
+  <link rel="icon" href="%PUBLIC_URL%/images/favicon.ico" />
+  <link rel="apple-touch-icon" href="%PUBLIC_URL%/images/logo192.png" />
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    .noscript-hero {
+      font-family: 'Manrope', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+      padding: 2rem;
+    }
+    
+    .noscript-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      width: 100%;
+    }
+    
+    .noscript-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 0;
+      margin-bottom: 3rem;
+    }
+    
+    .noscript-logo {
+      height: 50px;
+      width: auto;
+    }
+    
+    .noscript-nav a {
+      margin-left: 2rem;
+      color: #1e293b;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+    
+    .noscript-nav a:hover {
+      color: #4f46e5;
+    }
+    
+    .noscript-hero-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+      margin: 4rem 0;
+    }
+    
+    .noscript-hero-image {
+      width: 100%;
+      border-radius: 1rem;
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    }
+    
+    .noscript-title {
+      font-size: 3.5rem;
+      line-height: 1.2;
+      margin-bottom: 1.5rem;
+      color: #1e293b;
+    }
+    
+    .noscript-title strong {
+      color: #4f46e5;
+    }
+    
+    .noscript-text {
+      font-size: 1.25rem;
+      color: #475569;
+      margin-bottom: 2rem;
+      line-height: 1.6;
+    }
+    
+    .noscript-btn {
+      display: inline-block;
+      background: #4f46e5;
+      color: white;
+      padding: 1rem 2rem;
+      border-radius: 0.5rem;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s;
+      margin-right: 1rem;
+      margin-bottom: 1rem;
+    }
+    
+    .noscript-btn:hover {
+      background: #4338ca;
+      transform: translateY(-2px);
+      box-shadow: 0 10px 15px -3px rgba(79, 70, 229, 0.3);
+    }
+    
+    .noscript-btn-outline {
+      background: transparent;
+      border: 2px solid #4f46e5;
+      color: #4f46e5;
+    }
+    
+    .noscript-btn-outline:hover {
+      background: #4f46e5;
+      color: white;
+    }
+    
+    .noscript-features {
+      padding: 5rem 0;
+      background: white;
+    }
+    
+    .noscript-section-title {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 3rem;
+      color: #1e293b;
+    }
+    
+    .noscript-features-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+    
+    .noscript-feature-card {
+      background: #f8fafc;
+      padding: 2rem;
+      border-radius: 1rem;
+      transition: all 0.3s;
+    }
+    
+    .noscript-feature-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    }
+    
+    .noscript-feature-icon {
+      font-size: 2.5rem;
+      color: #4f46e5;
+      margin-bottom: 1rem;
+    }
+    
+    .noscript-feature-title {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      color: #1e293b;
+    }
+    
+    .noscript-testimonials {
+      padding: 5rem 0;
+      background: #f1f5f9;
+    }
+    
+    .noscript-footer {
+      padding: 3rem 0;
+      background: #1e293b;
+      color: white;
+    }
+    
+    .noscript-footer-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+    }
+    
+    .noscript-footer-logo {
+      height: 40px;
+      margin-bottom: 1rem;
+    }
+    
+    .noscript-footer-title {
+      font-size: 1.25rem;
+      margin-bottom: 1.5rem;
+      font-weight: 600;
+    }
+    
+    .noscript-footer-link {
+      display: block;
+      color: #cbd5e1;
+      margin-bottom: 0.75rem;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    
+    .noscript-footer-link:hover {
+      color: white;
+    }
+    
+    @media (max-width: 768px) {
+      .noscript-hero-content {
+        grid-template-columns: 1fr;
+      }
+      
+      .noscript-features-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .noscript-footer-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <noscript>
+    <div class="noscript-hero">
+      <div class="noscript-container">
+        <header class="noscript-header">
+          <img src="%PUBLIC_URL%/images/logo.png" alt="PulseAI" class="noscript-logo">
+          <nav class="noscript-nav">
+            <a href="#features">Features</a>
+            <a href="#how-it-works">How It Works</a>
+            <a href="#testimonials">Testimonials</a>
+            <a href="#contact">Contact</a>
+          </nav>
+        </header>
+        
+        <section class="noscript-hero-content">
+          <div>
+            <h1 class="noscript-title">
+              <strong>PulseAI</strong><br>
+              Your Health, Our Priority
+            </h1>
+            <p class="noscript-text">
+              Meet your new AI companion that's smarter than your average doctor. 
+              Get personalized health insights and advice at your fingertips!
+            </p>
+            <p class="noscript-text">
+              Our advanced AI analyzes your symptoms, medical history, and lifestyle 
+              to provide accurate health recommendations anytime, anywhere.
+            </p>
+            <div>
+              <a href="#signup" class="noscript-btn">Get Started</a>
+              <a href="#demo" class="noscript-btn noscript-btn-outline">See Demo</a>
+            </div>
+          </div>
+          <div>
+            <img src="%PUBLIC_URL%/images/hero-image.png" alt="AI Health Assistant" class="noscript-hero-image">
+          </div>
+        </section>
+      </div>
+    </div>
+    
+    <section id="features" class="noscript-features">
+      <div class="noscript-container">
+        <h2 class="noscript-section-title">Why Choose PulseAI?</h2>
+        <div class="noscript-features-grid">
+          <div class="noscript-feature-card">
+            <div class="noscript-feature-icon">💡</div>
+            <h3 class="noscript-feature-title">Smart Diagnosis</h3>
+            <p class="noscript-text">
+              Our AI cross-references millions of medical cases to provide 
+              accurate preliminary assessments of your symptoms.
+            </p>
+          </div>
+          <div class="noscript-feature-card">
+            <div class="noscript-feature-icon">⏱️</div>
+            <h3 class="noscript-feature-title">24/7 Availability</h3>
+            <p class="noscript-text">
+              Get health advice whenever you need it - no waiting rooms, 
+              no appointments, just instant support.
+            </p>
+          </div>
+          <div class="noscript-feature-card">
+            <div class="noscript-feature-icon">🔒</div>
+            <h3 class="noscript-feature-title">Secure & Private</h3>
+            <p class="noscript-text">
+              Your health data is encrypted and never shared without 
+              your explicit consent.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section id="how-it-works" class="noscript-features" style="background: #f1f5f9;">
+      <div class="noscript-container">
+        <h2 class="noscript-section-title">How PulseAI Works</h2>
+        <div class="noscript-features-grid">
+          <div class="noscript-feature-card">
+            <div class="noscript-feature-icon">1</div>
+            <h3 class="noscript-feature-title">Describe Your Symptoms</h3>
+            <p class="noscript-text">
+              Simply tell our AI about how you're feeling, just like you 
+              would to a doctor.
+            </p>
+          </div>
+          <div class="noscript-feature-card">
+            <div class="noscript-feature-icon">2</div>
+            <h3 class="noscript-feature-title">Get AI Analysis</h3>
+            <p class="noscript-text">
+              Our system compares your symptoms against medical databases 
+              to identify potential causes.
+            </p>
+          </div>
+          <div class="noscript-feature-card">
+            <div class="noscript-feature-icon">3</div>
+            <h3 class="noscript-feature-title">Receive Recommendations</h3>
+            <p class="noscript-text">
+              Get personalized advice on whether to monitor symptoms, try 
+              home remedies, or seek medical care.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section id="testimonials" class="noscript-testimonials">
+      <div class="noscript-container">
+        <h2 class="noscript-section-title">What Our Users Say</h2>
+        <div class="noscript-features-grid">
+          <div class="noscript-feature-card">
+            <p class="noscript-text">
+              "PulseAI helped me identify early warning signs of diabetes 
+              that I had missed. Probably saved my life!"
+            </p>
+            <p><strong>- Sarah K., 42</strong></p>
+          </div>
+          <div class="noscript-feature-card">
+            <p class="noscript-text">
+              "As a busy mom, I don't have time for unnecessary doctor visits. 
+              PulseAI tells me when it's really needed."
+            </p>
+            <p><strong>- Michael T., 35</strong></p>
+          </div>
+          <div class="noscript-feature-card">
+            <p class="noscript-text">
+              "The peace of mind from having medical advice available 
+              anytime is priceless."
+            </p>
+            <p><strong>- Priya M., 28</strong></p>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <footer class="noscript-footer">
+      <div class="noscript-container">
+        <div class="noscript-footer-grid">
+          <div>
+            <img src="%PUBLIC_URL%/images/logo-white.png" alt="PulseAI" class="noscript-footer-logo">
+            <p class="noscript-text" style="color: #cbd5e1;">
+              Your AI-powered health companion for accurate, 
+              personalized medical insights.
+            </p>
+          </div>
+          <div>
+            <h4 class="noscript-footer-title">Company</h4>
+            <a href="#" class="noscript-footer-link">About Us</a>
+            <a href="#" class="noscript-footer-link">Careers</a>
+            <a href="#" class="noscript-footer-link">Press</a>
+          </div>
+          <div>
+            <h4 class="noscript-footer-title">Resources</h4>
+            <a href="#" class="noscript-footer-link">Blog</a>
+            <a href="#" class="noscript-footer-link">Help Center</a>
+            <a href="#" class="noscript-footer-link">Privacy Policy</a>
+          </div>
+          <div>
+            <h4 class="noscript-footer-title">Contact</h4>
+            <a href="#" class="noscript-footer-link">support@pulseai.com</a>
+            <a href="#" class="noscript-footer-link">+1 (555) 123-4567</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </noscript>
+  <div id="root"></div>
+</body>
+</html>

@@ -1,0 +1,21 @@
+.theme-toggle {
+    background: none;
+    border: none;
+    color: var(--dark);
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 50%;
+    transition: all 0.3s;
+  }
+  
+  .theme-toggle:hover {
+    background: rgba(0, 0, 0, 0.05);
+  }
+  
+  .dark .theme-toggle {
+    color: white;
+  }
+  
+  .dark .theme-toggle:hover {
+    background: rgba(255, 255, 255, 0.1);
+  }

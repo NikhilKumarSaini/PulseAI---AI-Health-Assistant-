@@ -1,0 +1,190 @@
+.dashboard-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.dashboard-container {
+  flex: 1;
+  padding: 2rem 0;
+}
+
+.dashboard-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.dashboard-header h1 {
+  font-size: 3rem;
+  color: #1d4ed8; /* PulseAI blue */
+  font-weight: 700;
+}
+
+.dashboard-header p {
+  font-size: 1.2rem;
+  color: #4b5563; /* Darker gray */
+  margin-top: 0.5rem;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+@media (min-width: 992px) {
+  .dashboard-grid {
+    grid-template-columns: 2fr 1fr;
+  }
+}
+
+.chatbot-container {
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+}
+
+.metrics-collage {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.metric-card {
+  background: white;
+  border-radius: 0.75rem;
+  padding: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  height: 150px; /* Compact size */
+}
+
+.metric-card h3 {
+  font-size: 1rem;
+  margin: 0.5rem 0;
+}
+
+.metric-card p {
+  font-size: 1rem;
+  margin: 0.2rem 0;
+}
+
+.metric-card span {
+  font-size: 0.8rem;
+}
+
+.icon {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Custom colors for each card */
+.heart-rate {
+  background: #ef4444; /* Red */
+}
+
+.sleep-quality {
+  background: #3b82f6; /* Blue */
+}
+
+.hydration {
+  background: #34d399; /* Green */
+}
+
+.steps {
+  background: #f59e0b; /* Yellow */
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+  .metric-card {
+    height: 180px; /* Slightly larger for medium screens */
+  }
+}
+.dashboard-paragraphs {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background: #f9f9f9;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-paragraphs h2 {
+  font-size: 1.75rem;
+  color: var(--primary);
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.dashboard-paragraphs p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--text-dark);
+  margin-bottom: 1rem;
+}
+
+.dashboard-paragraphs blockquote {
+  font-size: 1.25rem;
+  font-weight: 600;
+  text-align: center;
+  color: var(--gray);
+  margin-top: 1.5rem;
+}
+.dashboard-paragraphs {
+  margin-top: 2rem;
+  padding: 2rem;
+  background: linear-gradient(135deg,   #cde3e4, #ffffff);
+  border-radius: 1rem;
+  box-shadow: 0 6px 10px rgba(91, 91, 91, 0.1);
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.dashboard-paragraphs h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2rem;
+  color: #002646; /* A soothing blue */
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.dashboard-paragraphs p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #37474f; /* A deep gray for better readability */
+  margin-bottom: 1.2rem;
+  text-align: justify;
+}
+
+.dashboard-paragraphs blockquote {
+  font-family: 'Georgia', serif;
+  font-size: 1.5rem;
+  font-style: italic;
+  color: #6a1b9a; /* A regal purple for emphasis */
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 0;
+}
+
+.dashboard-paragraphs blockquote:before {
+  content: "“";
+  font-size: 2rem;
+  color: #6a1b9a;
+}
+
+.dashboard-paragraphs blockquote:after {
+  content: "”";
+  font-size: 2rem;
+  color: #6a1b9a;
+}

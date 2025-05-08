@@ -1,0 +1,52 @@
+.notification {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    padding: 1rem 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    max-width: 350px;
+    animation: slideIn 0.3s ease-out;
+  }
+  
+  .notification.success {
+    background: #10b981;
+    color: white;
+  }
+  
+  .notification.error {
+    background: #ef4444;
+    color: white;
+  }
+  
+  .notification.warning {
+    background: #f59e0b;
+    color: white;
+  }
+  
+  .notification-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .notification-close {
+    background: none;
+    border: none;
+    color: inherit;
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-left: 1rem;
+  }
+  
+  @keyframes slideIn {
+    from {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }

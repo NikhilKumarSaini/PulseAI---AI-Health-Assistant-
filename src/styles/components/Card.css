@@ -1,0 +1,71 @@
+.health-card {
+    background: white;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .health-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  
+  .card-header h3 {
+    font-size: 1rem;
+    color: var(--gray);
+    font-weight: 500;
+  }
+  
+  .card-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    background: rgba(79, 70, 229, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary);
+  }
+  
+  .card-body {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+  
+  .card-value {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--dark);
+  }
+  
+  .card-unit {
+    font-size: 1rem;
+    color: var(--gray);
+    font-weight: 400;
+  }
+  
+  .card-trend {
+    font-size: 0.875rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 1rem;
+    width: fit-content;
+  }
+  
+  .card-trend.up {
+    background: rgba(16, 185, 129, 0.1);
+    color: #10b981;
+  }
+  
+  .card-trend.down {
+    background: rgba(239, 68, 68, 0.1);
+    color: #ef4444;
+  }
