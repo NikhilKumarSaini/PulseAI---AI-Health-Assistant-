@@ -27,6 +27,28 @@ Check out the live demo of PulseAI here:
 
 This project is hosted on [Vercel](https://vercel.com/), which automatically deploys the latest version whenever you push changes to the GitHub repository.
 
+## How to Login
+
+To try out the app, you can log in with the following credentials:
+
+- **Doctor:**  
+  Email: `doctor@pulseai.com`  
+  Password: `doctor123`
+
+- **User 1:**  
+  Email: `user1@pulseai.com`  
+  Password: `user123`
+
+- **User 2:**  
+  Email: `user2@pulseai.com`  
+  Password: `user123`
+
+- **Test User:**  
+  Email: `test@pulseai.com`  
+  Password: `test123`
+
+Feel free to log in with these credentials and explore the app's features. 😎
+
 ## Contributing
 
 We welcome contributions to PulseAI! If you have suggestions, improvements, or bug fixes, feel free to submit a pull request or open an issue.
