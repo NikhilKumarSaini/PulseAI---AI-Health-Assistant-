@@ -2,7 +2,10 @@
 
 PulseAI is an AI-powered health assistant designed to help you track and manage your health metrics. With features like heart rate monitoring, hydration tracking, and activity tracking, PulseAI aims to provide a comprehensive tool for maintaining a healthy lifestyle. The app provides personalized health insights and recommendations based on your daily activities.
 
-[**Live Demo**](https://pulse-ai-ai-health-assistant.vercel.app/)
+## Live Demo 🎉
+
+Check out the live demo of PulseAI here:  
+[**PulseAI - AI Health Assistant**](https://pulse-ai-ai-health-assistant.vercel.app/) 🚀
 
 ## Features
 
@@ -23,8 +26,6 @@ PulseAI is an AI-powered health assistant designed to help you track and manage 
 ## Deployment
 
 This project is hosted on [Vercel](https://vercel.com/), which automatically deploys the latest version whenever you push changes to the GitHub repository.
-
-Live Demo: [PulseAI - AI Health Assistant](https://pulse-ai-ai-health-assistant.vercel.app/)
 
 ## Contributing
 
